@@ -3,9 +3,9 @@ $BASE_URL = 'https://fakestoreapi.com/';
 
 function getAll(): array {
     global $BASE_URL;
-    $response = file_get_contents($BASE_URL . 'products');
+    $api_response = file_get_contents($BASE_URL . 'products');
     
-    return json_decode($response, true) ?? [];
+    return json_decode($api_response, true) ?? [];
 }
 
 function getProductFromId($id_prod) {
